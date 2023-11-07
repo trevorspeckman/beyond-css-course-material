@@ -1,3 +1,8 @@
+$clr-primary-100 : #f8f7f7;
+$clr-primary-900: #201e1f;
+
+$clr-primary-400: #da3f0b;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +12,8 @@ body {
   font-size: 1.75rem;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
-
+  background: $clr-primary-100 ;
+  color: $clr-primary-900;
   /* this is being used to center the content on the screen */
   display: grid;
   height: 100vh;
@@ -19,12 +25,40 @@ body {
   gap: 0.75em;
   width: min(90%, 60rem);
   padding: 2em;
+  box-shadow: $clr-primary-900 0px 8px 24px;
+
+  &__title {
+    color: $clr-primary-400
+  }
 }
 
 .btn {
   display: inline-block;
   padding: 0.5em 1.5em;
   text-decoration: none;
+  border: solid 1px $clr-primary-400;
+
+  border-radius: 0.5rem;
+
+  &:hover {
+    color: $clr-primary-100 ;
+  }
+
+  &:hover,
+  &:focus {
+    background: $clr-primary-900 ;
+    box-shadow: $clr-primary-400 0 0 1rem;
+  }
+
+  &--primary {
+    background: $clr-primary-400;
+    color: $clr-primary-100 ;
+  }
+
+  &--outline {
+    background: $clr-primary-100 ;
+    color: $clr-primary-400;
+  }
 }
 
 .flex-group {
